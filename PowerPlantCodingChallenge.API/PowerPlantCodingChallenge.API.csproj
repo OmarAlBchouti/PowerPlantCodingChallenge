@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>PowerPlantCodingChallengeAPI</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Application\**" />
+      <Content Remove="Application\**" />
+      <EmbeddedResource Remove="Application\**" />
+      <None Remove="Application\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\PowerPlantCodingChallenge.Domain\PowerPlantCodingChallenge.Domain.csproj" />
+        <ProjectReference Include="..\PowerPlantCodingChallenge.Services\PowerPlantCodingChallenge.Services.csproj" />
+    </ItemGroup>
+
+</Project>
